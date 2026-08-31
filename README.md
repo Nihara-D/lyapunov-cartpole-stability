@@ -1,6 +1,6 @@
 # The Bowl and the Ball
 
-### Numerical Lyapunov verification of a cart-pole balancing controller — without solving its equations of motion in closed form
+### Numerical Lyapunov verification of a cart-pole balancing controller - without solving its equations of motion in closed form
 
 This is a self-contained control project that combines **LQR control**, a **Lyapunov function**, the **true nonlinear cart-pole dynamics**, numerical state-space sampling, and a push-recovery simulation.
 
@@ -67,13 +67,13 @@ The bowl visualization is a **2D slice/projection of the four-dimensional Lyapun
 
 ## What the Code Demonstrates
 
-1. **LQR controller design** — The system is linearized around the upright equilibrium and an LQR controller is obtained from the continuous-time algebraic Riccati equation.
-2. **Lyapunov candidate from LQR** — The Riccati solution `P` is used to construct `V(z) = zᵀPz`.
-3. **Nonlinear verification** — `V̇` is evaluated using the actual nonlinear cart-pole equations rather than only the linearized model.
-4. **State-space sampling** — 20,000 deterministic-randomly generated states are tested to look for violations of `V̇ < 0`.
-5. **Numerical sublevel estimate** — The first sampled violation in terms of `V` is used to identify a conservative sublevel value with no observed violations among the tested samples.
-6. **Push recovery** — A nonlinear simulation starts with the pole approximately 20° from upright and checks whether `V` decreases during recovery.
-7. **Visualization** — The numerical results are turned into static plots and an animated Lyapunov-bowl visualization.
+1. **LQR controller design** - The system is linearized around the upright equilibrium and an LQR controller is obtained from the continuous-time algebraic Riccati equation.
+2. **Lyapunov candidate from LQR** - The Riccati solution `P` is used to construct `V(z) = zᵀPz`.
+3. **Nonlinear verification** - `V̇` is evaluated using the actual nonlinear cart-pole equations rather than only the linearized model.
+4. **State-space sampling** - 20,000 deterministic-randomly generated states are tested to look for violations of `V̇ < 0`.
+5. **Numerical sublevel estimate** - The first sampled violation in terms of `V` is used to identify a conservative sublevel value with no observed violations among the tested samples.
+6. **Push recovery** - A nonlinear simulation starts with the pole approximately 20° from upright and checks whether `V` decreases during recovery.
+7. **Visualization** - The numerical results are turned into static plots and an animated Lyapunov-bowl visualization.
 
 ## Results from This Run
 
